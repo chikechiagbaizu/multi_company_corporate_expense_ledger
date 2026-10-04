@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <data>
+        <menuitem id="menu_corporate_expense_root" name="Corporate Ledger" sequence="1" />
+        <menuitem id="menu_corporate_expense_list" name="Corporate Ledger" sequence="10"
+            parent="menu_corporate_expense_root" action="action_corporate_expense_registry" />
+    </data>
+</odoo>

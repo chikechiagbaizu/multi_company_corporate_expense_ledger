@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <data>
+        <!-- System Admin -->
+        <record id="corporate_expense_system_admin_group" model="res.groups">
+            <field name="name">Corporate_Expense: System_Admin</field>
+        </record>
+
+        <!-- Standard User -->
+        <record id="corporate_expense_standard_user_group" model="res.groups">
+            <field name="name">Corporate_Expense: Standard_User</field>
+        </record>
+    </data>
+</odoo>

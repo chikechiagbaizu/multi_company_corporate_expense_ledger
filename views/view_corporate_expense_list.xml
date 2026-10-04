@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <data>
+        <record id="view_corporate_expense_list" model="ir.ui.view">
+            <field name="name">corporate.expense.list.view</field>
+            <field name="model">corporate.expense</field>
+            <field name="arch" type="xml">
+                <list>
+                    <field name="name" />
+                    <field name="amount" />
+                    <field name="company_id" />
+                    <field name="state" />
+                </list>
+            </field>
+        </record>
+    </data>
+</odoo>

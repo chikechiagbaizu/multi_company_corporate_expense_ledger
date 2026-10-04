@@ -2,11 +2,21 @@
     'name': 'Multi-Company Corporate Expense Ledger',
     'summary': 'Consolidated Multi-Company Corporate Expense Ledger',
     'description': """
-    Enterprise Multi-Tenant Expense Management
-    ==========================================
-    * Enforces row-level security isolation across distinct company holdings using global record rules.
-    * Optimised query data processing via read_group() to aggregate heavy datasets directly in PostgreSQL.
-    * Automated administrative analytical script routines utilizing with_company() environment isolation context switches.
+    Enterprise Multi-Company Expense Management
+
+    ============================================
+    
+    * Enforces multi-company data isolation using access control lists
+    and record rules.
+
+    * Optimised expense data aggregation using Odoo's read_group()
+    for efficient reporting across large datasets.
+
+    * Supports controlled cross-company reporting using with_company()
+    to execute operations within the appropriate company context.
+
+    * Provides role-based access controls and expense lifecycle
+    restrictions for secure financial data management.
     """,
     'author': 'Chike Chiagbaizu',
     'maintainer': 'Chike Chiagbaizu',

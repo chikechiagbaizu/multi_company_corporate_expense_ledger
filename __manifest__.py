@@ -10,7 +10,7 @@
     """,
     'author': 'Chike Chiagbaizu',
     'maintainer': 'Chike Chiagbaizu',
-    'version': '19.0.1.0.0',
+    'version': '19.0.1.1.0',
     'license': 'LGPL-3',
     'category': 'Accounting',
     'sequence': 1,
@@ -18,7 +18,8 @@
     'installable': True,
     'auto-install': False,
     'depends': [
-        'base'
+        'base',
+        'account',
     ],
     'data': [
         'security/corporate_expense_groups.xml',

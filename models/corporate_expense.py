@@ -8,7 +8,7 @@ class CorporateExpense(models.Model):
     _description = 'Corporate Expense'
 
     name = fields.Char(
-                    string='Vendor Invoice', 
+                    string='Expense Reference', 
                     required=True
                     )
     amount = fields.Float(string='Amount')
@@ -22,9 +22,15 @@ class CorporateExpense(models.Model):
                     [
                         ('draft','Draft'),
                         ('approved','Approved'),
+                        ('denied','Denied'),
                     ], 
                     string='State', 
                     default='draft'
+                    )
+    invoice_id = fields.Many2one(
+                    comodel_name='account.move', 
+                    string='Invoice', 
+                    domain="[('move_type','=','in_invoice')]"
                     )
 
     def action_generate_global_expense_audit_logs(self):
@@ -50,3 +56,11 @@ class CorporateExpense(models.Model):
                 _logger.info(f"Audit Lock: Entity {company.name} registers total approved expenditure balance of {aggregated_data}")
         
         return True
+    
+    def action_approve(self):
+        for record in self:
+            record.state = 'approved'
+
+    def action_deny(self):
+        for record in self:
+            record.state = 'denied'

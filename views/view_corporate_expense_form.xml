@@ -8,6 +8,10 @@
             <field name="arch" type="xml">
                 <form>
                     <header>
+                        <button name="action_approve" string="Approve" type="object"
+                            class="btn-primary" invisible="state != 'draft'" />
+                        <button name="action_deny" string="Deny" type="object"
+                            class="btn-secondary" invisible="state != 'draft'" />
                         <field name="state" widget="statusbar" />
                     </header>
                     <sheet>
@@ -15,6 +19,7 @@
                             <field name="name" />
                             <field name="amount" />
                             <field name="company_id" />
+                            <field name="invoice_id" readonly="state != 'draft'" />
                         </group>
                     </sheet>
                 </form>
